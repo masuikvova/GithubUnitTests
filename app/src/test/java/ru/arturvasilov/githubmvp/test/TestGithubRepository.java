@@ -2,6 +2,7 @@ package ru.arturvasilov.githubmvp.test;
 
 import android.support.annotation.NonNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ru.gdgkazan.githubmvp.content.Authorization;
@@ -17,7 +18,7 @@ public class TestGithubRepository implements GithubRepository {
     @NonNull
     @Override
     public Observable<List<Repository>> repositories() {
-        return Observable.empty();
+        return Observable.just(new ArrayList<>());
     }
 
     @NonNull
